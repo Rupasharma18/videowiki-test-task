@@ -8,7 +8,7 @@ import AddIcon from '@material-ui/icons/Add';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { Grid } from '@material-ui/core';
 // import { Card } from 'react-bootstrap'
-import Model from 'react-modal'
+// import Model from 'react-modal'
 import axios from 'axios'
 class Home extends Component {
  state={
