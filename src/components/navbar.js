@@ -1,22 +1,26 @@
 import React, { Component } from 'react'
-import Appbar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
-import {Link }from 'react-router-dom';
-class Navbar extends Component {
-    render() {
-        return (
-            <Appbar>
-                <Toolbar className='nav-container'>
-                    <Button color="inherit" component={Link} to='/login'>Login</Button>
-                    <Button color="inherit" component={Link} to='/'>Home</Button>
-                    <Button color="inherit" component={Link} to= '/signup'>Signup</Button>
-                </Toolbar>
-            </Appbar>
-        )
-    }
+import { Navbar, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
+class NavBar extends Component {
+  render() {
+    console.log(this.props, "pralhad")
+    return (
+      <Navbar expand="lg" variant="light" style={{ backgroundColor: '#3578E5' }}>
+        <h1>Navgurukul</h1>
+
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+            <Link to="/login" ><Button variant="primary">Login</Button> </Link>
+            </li>
+            <li className="nav-item">
+            <Link to="/signup"> <Button variant="primary">Signup</Button></Link>
+            </li>
+          </ul>
+        </div>
+      </Navbar>
+    )
+  }
 }
-
-
-export default Navbar
+export default NavBar
 
